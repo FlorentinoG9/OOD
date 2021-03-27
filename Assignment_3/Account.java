@@ -1,14 +1,18 @@
 package Assignment_3;
 
 public class Account {
+  /** declare the super calss variables for the balance and the account number */
   private double balance;
   private int accountNumber;
 
+  /** constructor to init the aobject */
   Account(int accountNumber) {
-    this.balance = 0;
-    this.accountNumber = accountNumber;
+    /** at the start of the object init the balance to 0 and the account number */
+    setBalance(0);
+    setAccountNumber(accountNumber);
   }
 
+  /** Setters for the Account class */
   public void setAccountNumber(int accountNumber) {
     this.accountNumber = accountNumber;
   }
@@ -17,6 +21,7 @@ public class Account {
     this.balance = balance;
   }
 
+  /** Getters for the account class */
   public double getBalance() {
     return balance;
   }
@@ -25,19 +30,26 @@ public class Account {
     return accountNumber;
   }
 
+  /** Methods to use in this Account Object */
   public void depositFunds(double deposit) {
+    /** check if the deposit number is greater than 0 otherwise display an error */
     if (deposit <= 0) {
-      System.out.println("Error what is deposit cannot be $0.00");
+      System.out.println("Error your deposit cannot be $0.00");
     } else {
+      /** if deposit number is greater than 0 will added to the account */
       this.balance += deposit;
     }
   }
 
   public double withdrawFunds(double withdraw) {
-
-    if (this.balance - withdraw < 0) {
+    /**
+     * if the withdrae amount is greater than the amount in the balance will display
+     * an error saying that there arent enough funds in the account
+     */
+    if (getBalance() - withdraw < 0) {
       System.out.println("Sorry not enough funds");
     } else {
+      /** if not will withdraw the amount and return the new balance*/
       this.balance -= withdraw;
     }
 

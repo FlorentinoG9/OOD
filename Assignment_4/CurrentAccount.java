@@ -2,12 +2,15 @@ package Assignment_4;
 
 public class CurrentAccount extends Account {
 
+  static int classCounter = 0;
+
   /**
    * this constructor will assign whatever int value you passed through when
    * creating the object on the main method
    */
   CurrentAccount(int accountNumber) {
     super(accountNumber);
+    classCounter++;
   }
 
   /**
@@ -28,8 +31,10 @@ public class CurrentAccount extends Account {
 
     if (overDft >= -200) {
       setBalance(overDft);
+    } else if (getBalance() <= -200){
+      System.out.println("\nSorry you have reached you limit of 200 overdraft\n");
     } else {
-      System.out.println("Sorry your overdraft limit is reached");
+      System.out.printf("\nYou can withdraw: $%.2f to reach your limit\n\n", 200 + getBalance());
     }
   }
 
@@ -38,10 +43,10 @@ public class CurrentAccount extends Account {
    * we can added here as an example, when called this method inside this class
    * will call this override method and not from the super class
    */
-  
-  @Override
-  public void setBalance(double balance) {
-    super.setBalance(balance);
+
+  public void displayNumberOfAccount() {
+    // get the static int by calling the classfirst
+    System.out.println("Amount of Current Accounts: " + CurrentAccount.classCounter);
   }
 
 }

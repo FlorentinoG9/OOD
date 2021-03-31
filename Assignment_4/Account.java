@@ -1,6 +1,6 @@
 package Assignment_4;
 
-public class Account {
+public abstract class Account {
   /** declare the super calss variables for the balance and the account number */
   private double balance;
   private int accountNumber;
@@ -55,5 +55,11 @@ public class Account {
 
     return this.balance;
   }
+
+  public void printAccountInfo(){
+    System.out.println("Account Number: " + getAccountNumber());
+    System.out.printf("Balance: %.2f", getBalance());
+  }
+
 
 }

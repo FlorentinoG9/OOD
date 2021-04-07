@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Lab5 {
   public static void main(String[] args) {
-    /** Init the ArrayList of ITacxable objects */
+    /** Init the ArrayList of ITaxable objects */
     ArrayList<ITaxable> obj = new ArrayList<ITaxable>();
 
     /**
@@ -25,6 +25,5 @@ public class Lab5 {
       i.printTax();
       System.out.println();
     }
-
   }
 }

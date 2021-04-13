@@ -11,14 +11,16 @@
 ---
 
 You need to use the Taxable and PRSI interfaces as detailed below (create a separate java file for each).
+  ```java
   public interface Taxable {
-  public abstract double calculateTax();
-  public abstract void printTax();
+    public abstract double calculateTax();
+    public abstract void printTax();
   }
   public interface PRSI {
-  static final double rate = 0.04; // 4%
-  public abstract double calculatePRSI();
+    static final double rate = 0.04; // 4%
+    public abstract double calculatePRSI();
   }
+  ```
 
 1.  a. Create a Car class which has a make, model and engine size as attributes
     b. Have this class implement the Taxable interface.

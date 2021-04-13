@@ -13,11 +13,11 @@
    - An attribute for the account number.
    - An attribute for the balance of the account.
    - A one argument constructor which takes an account number and which sets the balance to zero.
-   - A method called depositFunds which accepts an amount to deposit into the account. If the amount is less than or equal to zero an error message should be printed.
-   - A method called withdrawFunds which accepts an amount to withdraw from the account. If the amount is less than zero, or if there aren’t enough funds in the account, then a message should be printed.
+   - A method called **depositFunds** which accepts an amount to deposit into the account. If the amount is less than or equal to zero an error message should be printed.
+   - A method called **withdrawFunds** which accepts an amount to withdraw from the account. If the amount is less than zero, or if there aren’t enough funds in the account, then a message should be printed.
 2. Write two classes which derive from the Account class called **SavingsAccount** and **CurrentAccount**.
-   - A SavingsAccount class, in addition to the attributes of an Account class, should have an interest variable and a method which applies this interest to the balance.
-   - A CurrentAccount class, in addition to the attributes of an Account class, should have an overdraft limit variable. This should allow a user to withdraw more than the present balance of the account, up to the overdraft limit e.g. a deposit account with an overdraft of 200 can have a balance of -200, but not -201.
+   - A **SavingsAccount** class, in addition to the attributes of an Account class, should have an interest variable and a method which applies this interest to the balance.
+   - A **CurrentAccount** class, in addition to the attributes of an Account class, should have an overdraft limit variable. This should allow a user to withdraw more than the present balance of the account, up to the overdraft limit e.g. a deposit account with an overdraft of 200 can have a balance of -200, but not -201.
    - Ensure that you have overridden methods of the Account class as necessary in both derived classes.
 3. Write another class called **Bank** containing a main method in order to fully test your account classes. Create an object for each account class (total 3). Using the objects call the various methods defined within these classes to illustrate that they are functioning correctly.
 

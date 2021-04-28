@@ -1,5 +1,5 @@
 package Assignment_7;
 
-public class Shape{
+public class Shape {
   protected Point centrePoint;
 }
